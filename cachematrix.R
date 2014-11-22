@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {     ## create main Functions to be c
            x <<- y                              ## store passed var y to global var x
            m <<- NULL                           ## initiate global m to NULL
        }
-       get <- function() x                      ## create get FUN Global returning global x from set Fun parm y
+       get <- function() x                      ## create get FUN returning global x from set Fun parm y
        setsolve <- function(solve) m <<- solve  ## create FUN with arg solve to cache solve value to global m
        getsolve <- function() m                 ## create FUN to return global m for matrix x
        list(set = set, get = get,               ## coerce FUN object list names $set $get $setsolve $getsolve
